@@ -8,16 +8,28 @@
  }
  .form {
      border: 1px solid white;
-     width: 50%;
      margin: auto;
      margin-top: 100px;
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     padding: 50px
+     padding: 20px 150px;
+     transition: transform 250ms;
+     border-top-left-radius: 100px;
+     border-bottom-right-radius: 100px;
+     box-shadow: 2px 2px 2px 2px  darkblue;
+     width: fit-content;
+     @media screen and (max-width:600px) {
+         padding: 10px 50px
+         
+     }
+
      
  
+ }
+ .form:hover {
+     transform: translateY(-50px);
  }
  .input {
     display: flex;
@@ -26,14 +38,15 @@
     align-items: flex-start;
     gap: 10px;
     padding: 10px;
-
+     
     &__fild {
-        width: 400px;
+        width:350px;
         background: whitesmoke;
         height: 30px;
         border: unset;
         border-radius: 20px
     }
+  
     &__text {
         font-kerning: none;
         font-style: italic;
@@ -41,4 +54,37 @@
         color: white;
         font-family: 'Times New Roman', Times, serif
     }
+ }
+ .input:hover{
+     transform: translateX(50px)
+ }
+ .btn {
+     display: flex;
+     flex-direction: column;
+     justify-content: start;
+     align-items: flex-start;
+     padding-top:20px;
+     &__button {
+       
+        width: 200px;
+        height: 30px; 
+        background: whitesmoke;
+        border: unset;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        color: darkslateblue;
+        border-radius: 20px;
+        font-weight: bold;
+
+     }
+     &__button:hover {
+        transform: translateX(50px);
+
+     }
+ }
+ .title {
+     color: whitesmoke;
+     font-size: 25px;
+     padding: 20px;
+     font-family: 'Times New Roman', Times, serif;
  }
